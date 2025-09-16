@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshal Vadher | Portfolio</title>
+  <style>
+    /* --- GLOBAL STYLES --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /*  FIX for sticky navbar overlap  */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* leaves space equal to navbar height */
+    }
+
+    a {
+      text-decoration: none;
+      color: #0d6efd;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #084298;
+    }
+
+    h1, h2, h3 {
+      color: #0d6efd;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    /* --- HEADER --- */
+    header {
+      background: #0d3b66;
+      color: #fff;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: #ffd60a;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      font-weight: 500;
+      color: #fff;
+    }
+
+    nav a:hover {
+      color: #ffd60a;
+    }
+
+    /* --- HAMBURGER MENU --- */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        background: #0d3b66;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* --- HERO --- */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to right, #0d3b66, #1d4e89);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffd60a;
+      color: #0d3b66;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #0d3b66;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* --- CARDS --- */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    /* --- CONTACT --- */
+    .contact {
+      background: #0d3b66;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact a {
+      color: #ffd60a;
+    }
+
+    .contact a:hover {
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      background: #1d2d44;
+      color: #fff;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Harshal Vadher</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Hi, I'm Harshal </h2>
+    <p>Enthusiastic MCA Student | Python & Web Developer</p>
+    <p>
+      <a href="mailto:harshalvadher7@gmail.com" style="color:#ffd60a;">📧 harshalvadher7@gmail.com</a> | 
+      <a href="https://www.linkedin.com/in/harshal-vadher-62b18227" target="_blank" style="color:#ffd60a;">🔗 LinkedIn</a>
+    </p>
+    <!-- DOWNLOAD RESUME BUTTON -->
+    <a href="Harshal_Resume.pdf" download class="btn">📄 Download Resume</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Enthusiastic MCA student with a strong foundation in programming and web development. 
+      Skilled in Python, JavaScript, and MySQL with hands-on project experience. 
+      Quick learner, eager to apply technical skills in real-world projects and grow as a professional developer.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><b>MCA</b> – Marwadi University (2024–Present)</li>
+      <li><b>BCA</b> – Marwadi University (2021–2024) | CGPA: 6.0</li>
+      <li><b>HSC</b> – Parishram School, Bhanvad (2021) | 63%</li>
+      <li><b>SSC</b> – Parishram School, Bhanvad (2019) | 61.5%</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card-container">
+      <div class="card"><b>Programming:</b> Python</div>
+      <div class="card"><b>Web Tech:</b> JavaScript, Node.js</div>
+      <div class="card"><b>Database:</b> MySQL</div>
+      <div class="card"><b>Other:</b> Frontend Development</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>E-commerce Ice-Cream Website</h3>
+        <p>Built using Python | (Jan 2025 – Apr 2025)</p>
+      </div>
+      <div class="card">
+        <h3>Money Expense Management</h3>
+        <p>Group Project using Java | (Jul 2022 – Apr 2022)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications & Workshops</h2>
+    <div class="card-container">
+      <div class="card">Front-End Journey by Infosys (Nov 2024)</div>
+      <div class="card">Intro to Cloud Computing by Infosys (Aug 2025)</div>
+      <div class="card">MERN Stack Workshop (Mar 2025)</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>📍 Rajkot, Gujarat, India</p>
+    <p>📧 <a href="mailto:harshalvadher7@gmail.com">harshalvadher7@gmail.com</a></p>
+    <p>📞 <a href="tel:+918849907399">+91 8849907399</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/harshal-vadher-62b18227" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Harshal Vadher | All Rights Reserved</p>
+  </footer>
+
+  <!-- SCRIPT FOR MENU -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
